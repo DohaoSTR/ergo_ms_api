@@ -1,0 +1,508 @@
+location_id,name,latitude,longitude,location_type_id
+1,Aruba,12.52088038,-69.98267711,3
+2,Afghanistan,33.83523073,66.00473366,3
+3,Angola,-12.29336054,17.53736768,3
+4,Anguilla,18.2239595,-63.06498927,3
+5,Albania,41.14244989,20.04983396,3
+6,Aland,60.21488688,19.95328768,3
+7,Andorra,42.54229102,1.56054378,3
+8,"United Arab Emirates",23.90528188,54.3001671,3
+9,Argentina,-35.3813488,-65.17980692,3
+10,Armenia,40.28952569,44.92993276,3
+11,"American Samoa",-14.30445997,-170.7180258,3
+12,Antarctica,-80.50857913,19.92108951,3
+13,"Ashmore and Cartier Is.",-12.42993164,123.5838379,3
+14,"Fr. S. Antarctic Lands",-49.24895485,69.22666758,3
+15,"Antigua and Barb.",17.2774996,-61.79469343,3
+16,Australia,-25.73288704,134.4910001,3
+17,Austria,47.58549439,14.1264761,3
+18,Azerbaijan,40.28827235,47.54599879,3
+19,Burundi,-3.35939666,29.87512156,3
+20,Belgium,50.63981576,4.64065114,3
+21,Benin,9.6417597,2.32785254,3
+22,"Burkina Faso",12.26953846,-1.75456601,3
+23,Bangladesh,23.86731158,90.23812743,3
+24,Bulgaria,42.76890318,25.21552909,3
+25,Bahrain,26.04205135,50.54196932,3
+26,Canada,61.36206324,-98.30777028,3
+27,Bahamas,24.29036702,-76.62843038,3
+28,"Bosnia and Herz.",44.17450125,17.76876733,3
+29,"St-BarthÃ©lemy",17.89880451,-62.84067779,3
+30,Belarus,53.53131377,28.03209307,3
+31,Belize,17.20027509,-88.71010486,3
+32,Bermuda,32.31367802,-64.7545589,3
+33,Bolivia,-16.70814787,-64.68538645,3
+34,Brazil,-10.78777702,-53.09783113,3
+35,Barbados,13.18145428,-59.559797,3
+36,Brunei,4.51968958,114.7220304,3
+37,Bhutan,27.41106589,90.40188155,3
+38,Botswana,-22.18403213,23.79853368,3
+39,"Central African Rep.",6.56823297,20.46826831,3
+40,Switzerland,46.79785878,8.20867471,3
+41,Chile,-37.73070989,-71.38256213,3
+42,China,36.56176546,103.8190735,3
+43,"CÃ´te d'Ivoire",7.6284262,-5.5692157,3
+44,Cameroon,5.69109849,12.73964156,3
+45,"Dem. Rep. Congo",-2.87746289,23.64396107,3
+46,Congo,-0.83787463,15.21965762,3
+47,"Cook Is.",-21.21927288,-159.7872422,3
+48,Colombia,3.91383431,-73.08114582,3
+49,Comoros,-11.87783444,43.68253968,3
+50,"Cape Verde",15.95523324,-23.9598882,3
+51,"Costa Rica",9.97634464,-84.19208768,3
+52,Cuba,21.62289528,-79.01605384,3
+53,"CuraÃ§ao",12.19551675,-68.97119369,3
+54,"Cayman Is.",19.42896497,-80.91213321,3
+55,"N. Cyprus",35.26277486,33.5684813,3
+56,Cyprus,34.91667211,33.0060022,3
+57,"Czech Rep.",49.73341233,15.31240163,3
+58,Germany,51.10698181,10.38578051,3
+59,Djibouti,11.74871806,42.5606754,3
+60,Dominica,15.4394702,-61.357726,3
+61,Denmark,55.98125296,10.02800992,3
+62,"Dominican Rep.",18.89433082,-70.50568896,3
+63,Algeria,28.15893849,2.61732301,3
+64,Ecuador,-1.42381612,-78.75201922,3
+65,Egypt,26.49593311,29.86190099,3
+66,Eritrea,15.36186618,38.84617011,3
+67,Spain,40.24448698,-3.64755047,3
+68,Estonia,58.67192972,25.54248537,3
+69,Ethiopia,8.62278679,39.60080098,3
+70,Finland,64.49884603,26.2746656,3
+71,Fiji,-17.42858032,165.4519543,3
+72,"Falkland Is.",-51.74483954,-59.35238956,3
+73,France,42.17344011,-2.76172945,3
+74,"Faeroe Is.",62.05385403,-6.88095423,3
+75,Micronesia,7.45246814,153.2394379,3
+76,Gabon,-0.58660025,11.7886287,3
+77,"United Kingdom",54.12387156,-2.86563164,3
+78,Georgia,42.16855755,43.50780252,3
+79,Guernsey,49.46809761,-2.57239064,3
+80,Ghana,7.95345644,-1.21676566,3
+81,Guinea,10.43621593,-10.94066612,3
+82,Gambia,13.44965244,-15.39601295,3
+83,Guinea-Bissau,12.04744948,-14.94972445,3
+84,"Eq. Guinea",1.70555135,10.34137924,3
+85,Greece,39.07469623,22.95555794,3
+86,Grenada,12.11725044,-61.68220189,3
+87,Greenland,74.71051289,-41.34191127,3
+88,Guatemala,15.69403664,-90.36482009,3
+89,Guam,13.44165626,144.7679102,3
+90,Guyana,4.79378034,-58.98202459,3
+91,"Hong Kong",22.39827737,114.1138045,3
+92,"Heard I. and McDonald Is.",-53.08724656,73.5205171,3
+93,Honduras,14.82688165,-86.6151661,3
+94,Croatia,45.08047631,16.40412899,3
+95,Haiti,18.93502563,-72.68527509,3
+96,Hungary,47.16277506,19.39559116,3
+97,Indonesia,-2.21505456,117.2401137,3
+98,"Isle of Man",54.22418911,-4.53873952,3
+99,India,22.88578212,79.6119761,3
+100,"Indian Ocean Ter.",-10.6478515,104.851898,3
+101,"Br. Indian Ocean Ter.",-7.33059751,72.44541229,3
+102,Ireland,53.1754487,-8.13793569,3
+103,Iran,32.57503292,54.27407004,3
+104,Iraq,33.03970582,43.74353149,3
+105,Iceland,64.99575386,-18.57396167,3
+106,Israel,31.46110101,35.00444693,3
+107,Italy,42.79662641,12.07001339,3
+108,Jamaica,18.15694878,-77.31482593,3
+109,Jersey,49.21837377,-2.12689938,3
+110,Jordan,31.24579091,36.77136104,3
+111,Japan,37.59230135,138.0308956,3
+112,"Siachen Glacier",35.39236325,77.18011865,3
+113,Kazakhstan,48.15688067,67.29149357,3
+114,Kenya,0.59988022,37.79593973,3
+115,Kyrgyzstan,41.46221943,74.54165513,3
+116,Cambodia,12.72004786,104.9069433,3
+117,Kiribati,0.86001503,-45.61110513,3
+118,"St. Kitts and Nevis",17.2645995,-62.68755265,3
+119,Korea,36.38523983,127.8391609,3
+120,Kosovo,42.57078707,20.87249811,3
+121,Kuwait,29.33431262,47.58700459,3
+122,"Lao PDR",18.50217433,103.7377241,3
+123,Lebanon,33.92306631,35.88016072,3
+124,Liberia,6.45278492,-9.32207573,3
+125,Libya,27.03094495,18.00866169,3
+126,"Saint Lucia",13.89479481,-60.96969923,3
+127,Liechtenstein,47.13665835,9.53574312,3
+128,"Sri Lanka",7.61266509,80.70108238,3
+129,Lesotho,-29.58003188,28.22723131,3
+130,Lithuania,55.32610984,23.88719355,3
+131,Luxembourg,49.76725361,6.07182201,3
+132,Latvia,56.85085163,24.91235983,3
+133,Macao,22.22311688,113.5093212,3
+134,St-Martin,18.08888611,-63.05972851,3
+135,Morocco,29.83762955,-8.45615795,3
+136,Monaco,43.75274627,7.40627677,3
+137,Moldova,47.19498804,28.45673372,3
+138,Madagascar,-19.37189587,46.70473674,3
+139,Maldives,3.7287092,73.45713004,3
+140,Mexico,23.94753724,-102.5234517,3
+141,"Marshall Is.",7.00376358,170.3397612,3
+142,Macedonia,41.59530893,21.68211346,3
+143,Mali,17.34581581,-3.54269065,3
+144,Malta,35.92149632,14.40523316,3
+145,Myanmar,21.18566599,96.48843321,3
+146,Montenegro,42.78890259,19.23883939,3
+147,Mongolia,46.82681544,103.0529977,3
+148,"N. Mariana Is.",15.82927563,145.6196965,3
+149,Mozambique,-17.27381643,35.53367543,3
+150,Mauritania,20.25736706,-10.34779815,3
+151,Montserrat,16.73941406,-62.18518546,3
+152,Mauritius,-20.27768704,57.57120551,3
+153,Malawi,-13.21808088,34.28935599,3
+154,Malaysia,3.78986846,109.6976228,3
+155,Namibia,-22.13032568,17.20963567,3
+156,"New Caledonia",-21.29991806,165.6849237,3
+157,Niger,17.41912493,9.38545882,3
+158,"Norfolk Island",-29.0514609,167.9492168,3
+159,Nigeria,9.59411452,8.08943895,3
+160,Nicaragua,12.84709429,-85.0305297,3
+161,Niue,-19.04945708,-169.8699468,3
+162,Netherlands,52.1007899,5.28144793,3
+163,Norway,68.75015572,15.34834656,3
+164,Nepal,28.24891365,83.9158264,3
+165,Nauru,-0.51912639,166.9325682,3
+166,"New Zealand",-41.81113557,171.4849235,3
+167,Oman,20.60515333,56.09166155,3
+168,Pakistan,29.9497515,69.33957937,3
+169,Panama,8.51750797,-80.11915156,3
+170,"Pitcairn Is.",-24.36500535,-128.317042,3
+171,Peru,-9.15280381,-74.38242685,3
+172,Philippines,11.77536778,122.8839325,3
+173,Palau,7.28742784,134.4080797,3
+174,"Papua New Guinea",-6.46416646,145.2074475,3
+175,Poland,52.12759564,19.39012835,3
+176,"Puerto Rico",18.22813055,-66.47307604,3
+177,"Dem. Rep. Korea",40.15350311,127.1924797,3
+178,Portugal,39.59550671,-8.50104361,3
+179,Paraguay,-23.22823913,-58.40013703,3
+180,Palestine,31.91613893,35.19628705,3
+181,"Fr. Polynesia",-14.72227409,-144.9049439,3
+182,Qatar,25.30601188,51.18479632,3
+183,Romania,45.85243127,24.97293039,3
+184,Russia,61.98052209,96.68656112,3
+185,Rwanda,-1.99033832,29.91988515,3
+186,"W. Sahara",24.22956739,-12.21982755,3
+187,"Saudi Arabia",24.12245841,44.53686271,3
+188,Sudan,15.99035669,29.94046812,3
+189,"S. Sudan",7.30877945,30.24790002,3
+190,Senegal,14.36624173,-14.4734924,3
+191,Singapore,1.35876087,103.8172559,3
+192,"S. Geo. and S. Sandw. Is.",-54.46488248,-36.43318388,3
+193,"Saint Helena",-12.40355951,-9.54779416,3
+194,"Solomon Is.",-8.92178022,159.6328767,3
+195,"Sierra Leone",8.56329593,-11.79271247,3
+196,"El Salvador",13.73943744,-88.87164469,3
+197,"San Marino",43.94186747,12.45922334,3
+198,Somaliland,9.73345496,46.25198395,3
+199,Somalia,4.75062876,45.70714487,3
+200,"St. Pierre and Miquelon",46.91918789,-56.30319779,3
+201,Serbia,44.2215032,20.78958334,3
+202,"SÃ£o TomÃ© and Principe",0.44391445,6.72429658,3
+203,Suriname,4.13055413,-55.9123457,3
+204,Slovakia,48.70547528,19.47905218,3
+205,Slovenia,46.11554772,14.80444238,3
+206,Sweden,62.77966519,16.74558049,3
+207,Swaziland,-26.55843045,31.4819369,3
+208,"Sint Maarten",18.05081728,-63.05713363,3
+209,Seychelles,-4.66099094,55.47603279,3
+210,Syria,35.02547389,38.50788204,3
+211,"Turks and Caicos Is.",21.83047572,-71.97387881,3
+212,Chad,15.33333758,18.64492513,3
+213,Togo,8.52531356,0.96232845,3
+214,Thailand,15.11815794,101.0028813,3
+215,Tajikistan,38.5304539,71.01362631,3
+216,Turkmenistan,39.11554137,59.37100021,3
+217,Timor-Leste,-8.82889162,125.8443898,3
+218,Tonga,-20.42843174,-174.8098734,3
+219,"Trinidad and Tobago",10.45733408,-61.26567923,3
+220,Tunisia,34.11956246,9.55288359,3
+221,Turkey,39.0616029,35.16895346,3
+222,Taiwan,23.7539928,120.9542728,3
+223,Tanzania,-6.27565408,34.81309981,3
+224,Uganda,1.27469299,32.36907971,3
+225,Ukraine,48.99656673,31.38326469,3
+226,Uruguay,-32.79951534,-56.01807053,3
+227,"United States",45.6795472,-112.4616737,3
+228,Uzbekistan,41.75554225,63.14001528,3
+229,Vatican,41.90174985,12.43387177,3
+230,"St. Vin. and Gren.",13.22472269,-61.20129695,3
+231,Venezuela,7.12422421,-66.18184123,3
+232,"British Virgin Is.",18.52585755,-64.47146992,3
+233,"U.S. Virgin Is.",17.95500624,-64.80301538,3
+234,Vietnam,16.6460167,106.299147,3
+235,Vanuatu,-16.22640909,167.6864464,3
+236,"Wallis and Futuna Is.",-13.88737039,-177.3483483,3
+237,Samoa,-13.75324346,-172.1648506,3
+238,Yemen,15.90928005,47.58676189,3
+239,"South Africa",-29.00034095,25.08390093,3
+240,Zambia,-13.45824152,27.77475946,3
+241,Zimbabwe,-19.00420419,29.8514412,3
+242,"Ahmedabad, India",23.033863,72.585022,1
+243,"Aizawl, India",23.727106,92.717636,1
+244,"Amaravati, India",20.937424,77.779549,1
+245,"Amritsar, India",31.63398,74.872261,1
+246,"Bengaluru, India",12.972442,77.580643,1
+247,"Bhopal, India",23.259933,77.412613,1
+248,"Brajrajnagar, India",21.494277,83.551813,1
+249,"Chandigarh, India",30.741482,76.768066,1
+250,"Chennai, India",13.067439,80.237617,1
+251,"Coimbatore, India",11.004556,76.961632,1
+252,"Delhi, India",28.6448,77.216721,1
+253,"Ernakulam, India",9.5848,76.1648,1
+254,"Gurugram, India",28.457523,77.026344,1
+255,"Guwahati, India",26.115103,91.703239,1
+256,"Hyderabad, India",17.38714,78.491684,1
+257,"Jaipur, India",26.92207,75.778885,1
+258,"Jorapokhar, India",22.422455,85.760651,1
+259,"Kochi, India",9.931233,76.267303,1
+260,"Kolkata, India",22.572645,88.363892,1
+261,"Lucknow, India",26.85,80.949997,1
+262,"Mumbai, India",19.07609,72.877426,1
+263,"Patna, India",25.612677,85.158875,1
+264,"Shillong, India",25.3432,91.525927,1
+265,"Talcher, India",20.951542,85.215668,1
+266,"Thiruvananthapuram, India",8.524139,76.936638,1
+267,"Visakhapatnam, India",17.686815,83.218483,1
+268,"19, Jong-ro 35ga-gil, Jongno-gu, Seoul, Korea",37.5720164,127.0050075,5
+269,"15, Deoksugung-gil, Jung-gu, Seoul, Korea",37.5642629,126.9746757,5
+270,"136, Hannam-daero, Yongsan-gu, Seoul, Korea",37.5400327,127.00485,5
+271,"215, Jinheung-ro, Eunpyeong-gu, Seoul, Korea",37.6098232,126.9348476,5
+272,"32, Segeomjeong-ro 4-gil, Seodaemun-gu, Seoul, Korea",37.5937421,126.9496787,5
+273,"10, Poeun-ro 6-gil, Mapo-gu, Seoul, Korea",37.5555803,126.9055975,5
+274,"18, Ttukseom-ro 3-gil, Seongdong-gu, Seoul, Korea",37.5418642,127.0496589,5
+275,"571, Gwangnaru-ro, Gwangjin-gu, Seoul, Korea",37.5471803,127.0924929,5
+276,"43, Cheonho-daero 13-gil, Dongdaemun-gu, Seoul, Korea",37.5757428,127.0288848,5
+277,"369, Yongmasan-ro, Jungnang-gu, Seoul, Korea",37.5848485,127.0940229,5
+278,"70, Samyang-ro 2-gil, Seongbuk-gu, Seoul, Korea",37.6067189,127.0272794,5
+279,"49, Samyang-ro 139-gil, Gangbuk-gu, Seoul, Korea",37.6479299,127.0119518,5
+280,"34, Sirubong-ro 2-gil, Dobong-gu, Seoul, Korea",37.6541919,127.0290879,5
+281,"17, Sanggye-ro 23-gil, Nowon-gu, Seoul, Korea",37.6587743,127.0685054,5
+282,"56, Jungang-ro 52-gil, Yangcheon-gu, Seoul, Korea",37.5259388,126.8566029,5
+283,"71, Gangseo-ro 45da-gil, Gangseo-gu, Seoul, Korea",37.54464,126.8351506,5
+284,"45, Gamasan-ro 27-gil, Guro-gu, Seoul, Korea",37.4984981,126.8896924,5
+285,"20, Geumha-ro 21-gil, Geumcheon-gu, Seoul, Korea",37.4523569,126.9082956,5
+286,"11, Yangsan-ro 23-gil, Yeongdeungpo-gu, Seoul, Korea",37.5250065,126.8973705,5
+287,"6, Sadang-ro 16a-gil, Dongjak-gu, Seoul, Korea",37.4809167,126.9714807,5
+288,"14, Sillimdong-gil, Gwanak-gu, Seoul, Korea",37.4873546,126.927102,5
+289,"16, Sinbanpo-ro 15-gil, Seocho-gu, Seoul, Korea",37.5045471,126.9944578,5
+290,"426, Hakdong-ro, Gangnam-gu, Seoul, Korea",37.5175282,127.0474699,5
+291,"236, Baekjegobun-ro, Songpa-gu, Seoul, Korea",37.5026857,127.0925092,5
+292,"59, Gucheonmyeon-ro 42-gil, Gangdong-gu, Seoul, Korea",37.5449625,127.1367917,5
+293,"Accra, Ghana",5.615,-0.159,1
+294,"Algiers, Algeria",36.732,3.14,1
+295,"Bangkok, Thailand",13.778,100.538,1
+296,"Beijing, Beijing, China",39.92,116.37,1
+297,"Buenos Aires, Argentina",-34.652,-58.547,1
+298,"Cairo, Egypt",30.034,31.282,1
+299,"Chicago, United States",41.86,-87.864,1
+300,"Guatemala City, Guatemala",14.605,-90.542,1
+301,"Istanbul, Turkey",40.981,29.065,1
+302,"Jeddah, Saudi Arabia",21.543,39.173,1
+303,"Johannesburg, South Africa",6.842,3.634,1
+304,"Kuwait City, Kuwait",29.382,47.977,1
+305,"Lagos, Nigeria",6.21,7.063,1
+306,"London, United Kingdom",51.506,-0.139,1
+307,"Los Angeles, United States",33.971,-117.969,1
+308,"Manila, Philippines",14.579,121.028,1
+309,"Mexico City, Mexico",19.446,-99.123,1
+310,"Moscow, Russia",55.743,37.645,1
+311,"Nairobi, Kenya",-1.23,36.738,1
+312,"Paris, France",48.863,2.315,1
+313,"Santiago, Chile",-33.491,-70.67,1
+314,"Sao Paulo, Brazil",-23.534,-46.615,1
+315,"Shanghai, Shanghai, China",31.25,121.44,1
+316,"Sydney, Australia",-33.854,150.998,1
+317,"Tehran, Iran",35.705,51.384,1
+318,"Tel Aviv, Israel",32.077,34.839,1
+319,"Tokyo, Japan",35.682,139.649,1
+320,"Warsaw, Poland",52.234,21.024,1
+321,"Addis Ababa, Ethiopia",9.001,38.756,1
+322,"Ahvaz, Iran",31.32,48.665,1
+323,"Alexandria, Egypt",31.152,29.884,1
+324,"Anqing, Anhui, China",30.536,117.05,1
+325,"Antwerp, Belgium",51.22,4.403,1
+326,"Arusha, Tanzania",-3.373,36.679,1
+327,"Astrakhan, Russia",46.34,48.02,1
+328,"Auckland, New Zealand",-36.915,174.786,1
+329,"Bacolod, Philippines",10.664,122.961,1
+330,"Baghdad, Iraq",33.32,44.379,1
+331,"Baku, Azerbaijan",40.4,49.881,1
+332,"Bamako, Mali",12.65,-8.0,1
+333,"Beira, Mozambique",-19.831,34.86,1
+334,"Belgaum, India",15.85,74.506,1
+335,"Belgrade, Serbia",44.798,20.447,1
+336,"Belo Horizonte, Brazil",-19.904,-44.005,1
+337,"Berezniki, Russia",59.415,56.795,1
+338,"Berlin, Germany",52.502,13.453,1
+339,"Bicheng, Chongqing, China",29.595,106.231,1
+340,"Bogota, Colombia",4.644,-74.129,1
+341,"Budapest, Hungary",47.484,19.09,1
+342,"Bukhara, Uzbekistan",39.763,64.465,1
+343,"Busan, Korea",35.167,129.036,1
+344,"Cabimas, Venezuela",10.284,-71.37,1
+345,"Caracas, Venezuela",10.479,-66.897,1
+346,"Cebu City, Philippines",10.322,123.907,1
+347,"Changzhi, Hunan, China",36.192,113.116,1
+348,"Changzhou, Jingsu, China",31.775,119.97,1
+349,"Chengdu, Sichuan, China",30.667,104.051,1
+350,"Chengguan, Guizhou, China",26.68,105.769,1
+351,"Cheonan, Korea",36.826,127.144,1
+352,"Cirebon, Indonesia",-6.702,108.497,1
+353,"Cleveland, United States",41.47,-81.636,1
+354,"Cochabamba, Bolivia",-17.391,-66.17,1
+355,"Cordoba, Argentina",-31.381,-64.216,1
+356,"Culiacan, Mexico",24.798,-107.402,1
+357,"Curitiba, Brazil",-25.463,-49.254,1
+358,"Dhaka, Bangladesh",23.766,90.418,1
+359,"Dzerzhinsk, Russia",56.241,43.455,1
+360,"Florianopolis, Brazil",-27.595,-48.613,1
+361,"Fukuoka, Japan",33.598,130.437,1
+362,"Gainesville, FL, United States",29.661,-82.377,1
+363,"Gaoyou, Jiangsu, China",32.792,119.43,1
+364,"Gombe, Nigeria",10.29,11.167,1
+365,"Gomel, Belarus",52.432,30.972,1
+366,"Gorgan, Iran",36.843,54.436,1
+367,"Guadalajara, Mexico",20.66,-103.357,1
+368,"Guangzhou, Guangdong, China",22.936,113.608,1
+369,"Guixi, Chongqing, China",30.332,107.348,1
+370,"Gwangju, Korea",35.146,126.919,1
+371,"Haikou, Hainan, China",20.028,110.329,1
+372,"Halle, Germany",51.487,11.97,1
+373,"Hangzhou, Zhejiang, China",30.305,120.168,1
+374,"Hindupur, India",13.838,77.488,1
+375,"Ho Chi Minh City, Vietnam",10.83,106.713,1
+376,"Holguin, Cuba",20.883,-76.263,1
+377,"Hong Kong, Hong Kong, China",22.346,114.183,1
+378,"Houston, United States",29.78,-95.386,1
+379,"Ibadan, Nigeria",7.388,3.896,1
+380,"Ilheus, Brazil",-14.803,-39.045,1
+381,"Ipoh, Malaysia",4.59,101.077,1
+382,"Jalna, India",19.851,75.878,1
+383,"Jequie, Brazil",-13.862,-40.085,1
+384,"Jinan, Shandong, China",36.682,117.02,1
+385,"Jinju, Korea",35.187,128.107,1
+386,"Kabul, Afghanistan",34.529,69.172,1
+387,"Kaiping, Guangdong, China",22.38,112.688,1
+388,"Kairouan, Tunisia",35.673,10.096,1
+389,"Kampala, Uganda",0.315,32.585,1
+390,"Kanpur, India",26.457,80.31,1
+391,"Karachi, Pakistan",24.9,67.075,1
+392,"Kaunas, Lithuania",54.903,23.925,1
+393,"Kayseri, Turkey",38.724,35.48,1
+394,"Khartoum, Sudan",15.552,32.532,1
+395,"Kigali, Rwanda",9.927,8.88,1
+396,"Killeen, United States",31.112,-97.732,1
+397,"Kinshasa, Dem. Rep. Congo",-4.374,15.32,1
+398,"Kozhikode, India",11.254,75.803,1
+399,"Lahore, Pakistan",31.514,74.314,1
+400,"Lausanne, Switzerland",46.516,6.633,1
+401,"Le Mans, France",47.989,0.199,1
+402,"Leon, Nicaragua",12.438,-86.878,1
+403,"Leshan, Sichuan, China",29.591,103.754,1
+404,"Luanda, Angola",-8.825,13.26,1
+405,"Lubumbashi, Dem. Rep. Congo",-11.677,27.48,1
+406,"Madrid, Spain",40.413,-3.707,1
+407,"Malatya, Turkey",38.35,38.27,1
+408,"Malegaon, India",20.562,74.52,1
+409,"Manchester, United Kingdom",53.47,-2.474,1
+410,"Marrakesh, Morocco",31.636,-8.021,1
+411,"Medan, Indonesia",3.596,98.651,1
+412,"Milan, Italy",45.608,9.222,1
+413,"Minneapolis, United States",44.959,-93.256,1
+414,"Modesto, United States",37.649,-120.993,1
+415,"Montreal, Canada",45.534,-73.658,1
+416,"Myeik, Myanmar",12.448,98.618,1
+417,"Nakuru, Kenya",-0.294,36.058,1
+418,"Ndola, Zambia",-12.981,28.634,1
+419,"New York, United States",40.842,-73.798,1
+420,"Nikolaev, Ukraine",46.974,32.029,1
+421,"Okayama, Japan",34.657,133.949,1
+422,"Oldenburg, Germany",53.148,8.207,1
+423,"Osaka, Japan",34.718,135.389,1
+424,"Oyo, Nigeria",6.818,3.916,1
+425,"Palembang, Indonesia",-2.958,104.736,1
+426,"Palermo, Italy",38.135,13.33,1
+427,"Palmas, Brazil",-10.189,-48.33,1
+428,"Parbhani, India",19.28,76.765,1
+429,"Parepare, Indonesia",-7.772,112.195,1
+430,"Pematangtiantar, Indonesia",2.962,99.074,1
+431,"Philadelphia, United States",40.015,-75.168,1
+432,"Pingxiang, Jiangxi, China",27.643,113.851,1
+433,"Pokhara, Nepal",28.22,83.98,1
+434,"Port Elizabeth, South Africa",13.052,5.23,1
+435,"Portland, OR, United States",45.52,-122.666,1
+436,"Pune, India",18.524,73.864,1
+437,"Pyongyang, Dem. Rep. Korea",39.045,125.767,1
+438,"Qingdao, Shandong, China",36.22,120.403,1
+439,"Qom, Iran",34.64,50.876,1
+440,"Quito, Ecuador",-0.135,-78.443,1
+441,"Rajshahi, Bangladesh",24.367,88.6,1
+442,"Raleigh, United States",35.807,-78.675,1
+443,"Rawang, Malaysia",3.33,101.577,1
+444,"Reynosa, Mexico",26.063,-98.302,1
+445,"Ribeirao Preto, Brazil",-21.172,-47.798,1
+446,"Riyadh, Saudi Arabia",24.686,46.742,1
+447,"Rovno, Ukraine",50.624,26.248,1
+448,"Saidpur, Bangladesh",25.802,88.881,1
+449,"Saint Petersburg, Russia",59.911,30.348,1
+450,"San Salvador, El Salvador",13.7,-89.201,1
+451,"Sana, Yemen",15.363,44.208,1
+452,"Seoul, Korea",37.495,126.939,1
+453,"Sheffield, United Kingdom",53.454,-1.356,1
+454,"Shenzhen, Guangdong, China",24.316,116.112,1
+455,"Shymkent, Kazakhstan",42.315,69.63,1
+456,"Sialkot, Pakistan",32.508,74.524,1
+457,"Singapore, Singapore",1.29,103.85,1
+458,"Singrauli, India",82.671,24.2,1
+459,"Sitapur, India",27.568,80.692,1
+460,"Springfield, MA, United States",37.19,-93.293,1
+461,"Suining, Sichuan, China",30.524,105.564,1
+462,"Suva, Fiji",-18.142,178.441,1
+463,"Taipei, Taiwan, China",25.047,121.546,1
+464,"Tangshan, Hebei, China",39.648,118.19,1
+465,"Tashkent, Uzbekistan",41.297,69.233,1
+466,"Tebessa , Algeria",35.416,8.108,1
+467,"Thessaloniki, Greece",40.65,22.916,1
+468,"Tianjin,  Tianjin, China",39.142,117.189,1
+469,"Tijuana, Mexico",32.499,-116.97,1
+470,"Toledo, United States",41.655,-83.602,1
+471,"Tyumen, Russia",57.16,65.551,1
+472,"Ulaanbaatar, Mongolia",47.93,106.889,1
+473,"Valledupar, Colombia",10.464,-73.261,1
+474,"Victoria, Canada",48.456,-123.401,1
+475,"Vienna, Austria",48.124,16.346,1
+476,"Vijayawada, India",16.515,80.641,1
+477,"Vinh Long, Vietnam",10.25,105.967,1
+478,"Wuhan, Hubei, China",30.576,114.295,1
+479,"Xingping, Shaanxi, China",34.308,108.463,1
+480,"Xucheng, Jiangsu, China",33.004,118.507,1
+481,"Yamaguchi, Japan",34.155,131.458,1
+482,"Yanggu, Shandong, China",36.116,115.786,1
+483,"Yiyang, Hunan, China",28.587,112.356,1
+484,"Yucheng, Zhejiang, China",28.125,121.247,1
+485,"Yulin, Guangxi, China",22.611,110.139,1
+486,"Zhengzhou, Henan, China",34.756,113.637,1
+487,"Zhuji, Zhejiang, China",29.725,120.237,1
+488,"Zunyi, Guizhou, China",27.696,106.925,1
+489,"Zwolle, Netherlands",52.513,6.09,1
+490,"Bouvet Is.",-54.4333316,3.3999984,3
+491,"Christmas Is.",-10.474895,105.616257,3
+492,"Cocos (Keeling) Islands",-12.1709,96.8417,3
+493,"Fr. Guiana",3.9332383,-53.0875742,3
+494,Gibraltar,36.1319767,-5.3529174,3
+495,Guadeloupe,16.1730949,-61.4054001,3
+496,"Holy See (Vatican City State)",41.9038795,12.4520834,3
+497,Martinique,14.6336817,-61.0198104,3
+498,Mayotte,-12.8210325,45.1590997,3
+499,"Netherlands Antilles",12.226079,-69.060087,3
+500,"Réunion",-21.1306889,55.5264794,3
+501,"Saint Barthélemy",17.9139222,-62.8338521,3
+502,"South Georgia and the South Sandwich Islands",-54.4306908,-36.9869112,3
+503,"Svalbard and Jan Mayen",78.698105,15.723717,3
+504,Tokelau,-9.1668337,-171.8182111,3
+505,Tuvalu,-7.4784418,178.6799214,3
+506,"U. S. Minor Outlying Islands",19.295374,166.6280441,3
+507,"Union of Soviet Socialist Republics",55.659303,39.848882,3
