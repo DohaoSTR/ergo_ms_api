@@ -28,8 +28,8 @@ class Location(models.Model):
 
 class CountryCodeAdjacent(models.Model):
     location = models.ForeignKey(Location, on_delete=models.CASCADE)
-    a2_code = models.CharField(max_length=2)
-    a3_code = models.CharField(max_length=3)
+    a2_code = models.CharField(max_length=5)
+    a3_code = models.CharField(max_length=5)
     numeric = models.IntegerField()
 
     def __str__(self):

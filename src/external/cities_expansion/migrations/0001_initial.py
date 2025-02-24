@@ -32,8 +32,8 @@ class Migration(migrations.Migration):
             name='CountryCodeAdjacent',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('a2_code', models.CharField(max_length=2)),
-                ('a3_code', models.CharField(max_length=3)),
+                ('a2_code', models.CharField(max_length=5)),
+                ('a3_code', models.CharField(max_length=5)),
                 ('numeric', models.IntegerField()),
                 ('location', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='cities_expansion.location')),
             ],
