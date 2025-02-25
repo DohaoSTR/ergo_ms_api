@@ -2,7 +2,7 @@
 Файл для определения Poetry команд.
 """
 
-from commands.base import PoetryCommand
+from commands.base import PoetryCommand, FetchBitcoinPriceCommand
 
 class MakeMigrationsCommand(PoetryCommand):
     """
@@ -187,4 +187,30 @@ class StopCeleryBeatCommand(PoetryCommand):
     django_command_name = 'stop_celery_beat'
 
     def __init__(self):
+<<<<<<< HEAD
         super().__init__(self.django_command_name)
+=======
+        super().__init__(self.django_command_name)
+
+class StartRedisCommand(PoetryCommand):
+
+    """
+    Команда для запуска Redis.
+    """
+    poetry_command_name = 'start_redis'
+    django_command_name = 'start_redis'
+
+    def __init__(self):
+        super().__init__(self.django_command_name)
+
+class StopRedisCommand(PoetryCommand):
+    """
+    Команда для остановки Redis.
+    """
+    poetry_command_name = 'stop_redis'
+    django_command_name = 'stop_redis'
+
+    def __init__(self):
+        super().__init__(self.django_command_name)
+
+>>>>>>> b6fb6b1 (Add ETL module)

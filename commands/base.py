@@ -97,3 +97,13 @@ class PoetryCommand:
             raise RuntimeError("Не удалось определить, какую команду выполнять.")
 
         os.system(command)
+
+class FetchBitcoinPriceCommand(PoetryCommand):
+    """
+    Команда для получения текущей цены биткоина и сохранения её в БД.
+    """
+    poetry_command_name = "fetch_price"
+    django_command_name = "fetch_price"
+
+    def __init__(self):
+        super().__init__(self.django_command_name)
