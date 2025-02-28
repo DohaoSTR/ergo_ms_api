@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from src.external.cities_expansion.models import LocationType, Location, CountryCodeAdjacent
+from src.external.cities_expansion.models import LocationType, Location, CountryCodeAdjacent, BoundingBox
 
 class LocationTypeSerializer(serializers.ModelSerializer):
     class Meta:
@@ -34,3 +34,20 @@ class CountryCodeSerializer(serializers.ModelSerializer):
     
     def get_country_name(self, obj):
         return obj.location.name
+    
+class BoundingBoxSerializer(serializers.ModelSerializer):
+    location_name = serializers.SerializerMethodField(read_only=True)
+    location_type = serializers.SerializerMethodField(read_only=True)
+
+    class Meta:
+        model = BoundingBox
+        fields = ['location_id', 'location_name', 'location_type',
+                  'bottom_left_latitude','bottom_left_longitude',
+                  'upper_right_latitude','upper_right_longitude']
+        read_only_fields = ['location_id', 'location_name', 'location_type']
+    
+    def get_location_name(self, obj):
+        return obj.location.name
+    
+    def get_location_type(self, obj):
+        return obj.location.location_type.name

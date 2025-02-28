@@ -2,8 +2,8 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 
-from src.external.cities_expansion.models import Location, LocationType, CountryCodeAdjacent
-from src.external.cities_expansion.serializers import LocationSerializer, CountryCodeSerializer
+from src.external.cities_expansion.models import Location, LocationType, CountryCodeAdjacent, BoundingBox
+from src.external.cities_expansion.serializers import LocationSerializer, CountryCodeSerializer, BoundingBoxSerializer
 
 from drf_yasg.utils import swagger_auto_schema
 from drf_yasg.openapi import Schema, Items, TYPE_OBJECT, TYPE_STRING, TYPE_ARRAY
@@ -121,4 +121,40 @@ class CountryCodesView(APIView):
         country_codes = CountryCodeAdjacent.objects.all()
         serializer = CountryCodeSerializer(country_codes, many=True)
         data = {"country_codes": serializer.data}
+        return Response(data, status=status.HTTP_200_OK)
+
+class BoundingBoxesView(APIView):
+    @swagger_auto_schema(
+        operation_description="Получение информации о доступных ограничивающих прямоугольниках",
+        responses={
+            200: openapi.Response(
+                description="Список ограничивающих прямоугольников",
+                schema=openapi.Schema(
+                    type=openapi.TYPE_OBJECT,
+                    properties={
+                        'bounding_boxes': openapi.Schema(
+                            type=openapi.TYPE_ARRAY,
+                            items=openapi.Items(
+                                type=openapi.TYPE_OBJECT,
+                                properties={
+                                    'location_id': openapi.Schema(type=openapi.TYPE_INTEGER),
+                                    'location_name': openapi.Schema(type=openapi.TYPE_STRING),
+                                    'location_type': openapi.Schema(type=openapi.TYPE_STRING),
+                                    'bottom_left_latitude': openapi.Schema(type=openapi.TYPE_NUMBER),
+                                    'bottom_left_longitude': openapi.Schema(type=openapi.TYPE_NUMBER),
+                                    'upper_right_latitude': openapi.Schema(type=openapi.TYPE_NUMBER),
+                                    'upper_right_longitude': openapi.Schema(type=openapi.TYPE_NUMBER)
+                                }
+                            )
+                        )
+                    }
+                )
+            )
+        }
+    )
+
+    def get(self, request, *args, **kwargs):
+        bounding_boxes = BoundingBox.objects.all()
+        serializer = BoundingBoxSerializer(bounding_boxes, many=True)
+        data = {"bounding_boxes": serializer.data}
         return Response(data, status=status.HTTP_200_OK)
