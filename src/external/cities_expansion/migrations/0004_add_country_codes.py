@@ -19,8 +19,8 @@ def import_csv(apps, schema_editor):
             )
 
 def reverse_import(apps, schema_editor):
-    Location = apps.get_model('cities_expansion', 'CountryCodeAdjacent')
-    Location.objects.all().delete()
+    CountryCodeAdjacent = apps.get_model('cities_expansion', 'CountryCodeAdjacent')
+    CountryCodeAdjacent.objects.all().delete()
 
 class Migration(migrations.Migration):
     dependencies = [
