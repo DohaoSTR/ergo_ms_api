@@ -117,7 +117,6 @@ def handler():
 
 ## URL маршруты
 URL-пути также добавляются автоматически функцией `discover_installed_app_urls` из `api/src/config/auto_config.py`. Функция находит все файлы `urls.py` в `api/src/external` и добавляет их маршруты в общую конфигурацию URL.
-```
 
 # Пример структуры LMS модуля
 
