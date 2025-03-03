@@ -27,7 +27,6 @@ scripts/
 | Команда Poetry | Django команда | Описание |
 |---------------|----------------|-----------|
 | makemigrations | makemigrations | Создание миграций базы данных |
-
 | migrate | migrate | Применение миграций |
 | dev | runserver | Запуск сервера разработки |
 | prod | start_daphne | Запуск production сервера |
