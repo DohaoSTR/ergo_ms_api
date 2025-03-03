@@ -137,7 +137,7 @@ class Command(BaseCommand):
 
                     # Создавайте свои представления здесь
                 """),
-                'migrations\__init__.py': '',
+                os.path.join('migrations', '__init__.py'): '',
             }
 
             self.create_file_structure(submodule_directory, files_to_create)
