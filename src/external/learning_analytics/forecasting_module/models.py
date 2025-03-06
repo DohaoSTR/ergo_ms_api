@@ -1,0 +1,84 @@
+from django.db import models
+
+class Speciality(models.Model):
+    """
+    Модель Speciality представляет собой информацию о специальности (направлении подготовки).
+
+    Attributes:
+        code (CharField): Код специальности. Максимальная длина — 20 символов.
+        name (CharField): Наименование специальности. Максимальная длина — 255 символов.
+        specialization (CharField): Наименование специализации. Максимальная длина - 255 символов.
+        department (CharField): Кафедра, выпускающая специальность. Максимальная длина - 255 символов.
+        faculty (CharField): Факультет. Максимальная длина - 255 символов.
+        education_duration (SmallAutoField): Срок получения образования. Подразумевается измерение в количестве месяцев. 
+        year_of_admission (CharField): Год поступления (для учета различий в УП)
+    """
+    code = models.CharField(max_length=20, unique=True, verbose_name="Код специальности")
+    name = models.CharField(max_length=255, verbose_name="Специальность")
+    specialization = models.CharField(max_length=255, verbose_name="Специализация")
+    department = models.CharField(max_length=255, verbose_name="Кафедра")
+    faculty = models.CharField(max_length=255, verbose_name="Факультет")
+    education_duration = models.PositiveSmallIntegerField(verbose_name="Срок получения образования")
+    year_of_admission = models.CharField(max_length=4, verbose_name="Год поступления")
+
+    def __str__(self):
+        return f"{self.code} - {self.name}"
+
+    class Meta:
+        verbose_name = "Специальность"
+        verbose_name_plural = "Специальности"
+
+
+class Discipline(models.Model):
+    """
+    Модель Discipline представляет собой информацию о дисциплине.
+    
+    Attributes:
+        code (CharField): Код дисциплины. Максимальна длина - 10 символов.
+        name (CharField): Наименование дисциплины. Максимальная длина - 255 символов.
+        semesters (CharField): Период освоения дисциплины (номера семестров через ','). Максимальная длина - 12 символов.
+        contact_work_hours (SmallAutoField): Длительность контактной работы, часы. 
+        independent_work_hours (SmallAutoField): Длительность самостоятельной работы, часы.
+        controle_work_hours (SmallAutoField): Длительность контроля, часы
+        competencies (JSONField): Перечень осваиваемых компетенций
+    """
+    code = models.CharField(max_length=10, unique=True, verbose_name="Код дисциплины")
+    name = models.CharField(max_length=255, verbose_name="Наименование")
+    # Подразумевается максимум 6 семестров
+    semesters = models.CharField(max_length=12, verbose_name="Период освоения (семестры)")
+    contact_work_hours = models.PositiveSmallIntegerField(verbose_name="Контактная работа, ч")
+    independent_work_hours = models.PositiveSmallIntegerField(verbose_name="Самостоятельная работа, ч")
+    controle_work_hours = models.PositiveSmallIntegerField(verbose_name="Контроль, ч")
+    # todo: Подразумевается дополнительно включить логику рассмотрения рабочих планов по дисциплине (РПД хранят расписанные перечни компетенций)
+    competencies = models.JSONField(verbose_name="Осваиваемые компетенции")
+
+    def __str__(self):
+        return f"{self.code} - {self.name}"
+
+    class Meta:
+        verbose_name = "Дисциплина"
+        verbose_name_plural = "Дисциплины"
+
+
+class AcademicCompetenceMatrix(models.Model):
+    """
+    Модель AcademicCompetenceMatrix - модель, представляющая матрицу академических компетенций, на основании
+    которой в дальнейшем будет формироваться основной вектор индивидуальной траектории обучения.
+
+
+    Attributes:
+        speciality_id (PositiveIntegerField): Код специальности, для которой формируется матрица академических компетенций
+        discipline_list  (JSONField): Перечень осваиваемых дисциплин (хранит указатели на дисциплины)
+        technology_stack  (JSONField): Изучаемый стек технологий (подразумевается дублирование для дальнейшего приоритета и распределения)
+    """
+
+    speciality_id = models.PositiveIntegerField(unique=True, verbose_name="Код специальности")
+    discipline_list = models.JSONField(verbose_name="Перечень изучаемых дисциплин")
+    technology_stack  = models.JSONField(verbose_name="Перечень изучаемых технологий в течение времени")
+
+    def __str__(self):
+        return f"Матрица академических компетенций № {self.speciality_id}"
+
+    class Meta:
+        verbose_name = "Матрица академических компетенций"
+        verbose_name_plural = "Матрицы академических компетенций"
