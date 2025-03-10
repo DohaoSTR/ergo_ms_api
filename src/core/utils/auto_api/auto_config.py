@@ -80,20 +80,21 @@ def discover_installed_app_urls(apps_dir: str, prefix: str = None) -> List[str]:
 
     Аргументы:
         apps_dir (str): Базовая директория, в которой находятся приложения.
-        prefix (str): Префикс для импорта модулей (например, "src").
+        prefix (str): Префикс для импорта модулей (например, "src.external").
 
     Возвращает:
         list: Список URL-конфигураций для установленных приложений.
     """
     urlpatterns = []
 
-    def recursively_find_urls(current_dir: str, current_prefix: str) -> None:
+    def recursively_find_urls(current_dir: str, current_prefix: str, current_route: str = "") -> None:
         """
         Рекурсивно обходит директории и находит URL-конфигурации.
 
         Аргументы:
             current_dir (str): Текущая директория для обхода.
             current_prefix (str): Текущий префикс для импорта модулей.
+            current_route (str): Текущий маршрут, учитывающий иерархию модулей.
         """
         for module_name in os.listdir(current_dir):
             module_path = os.path.join(current_dir, module_name)
@@ -104,19 +105,21 @@ def discover_installed_app_urls(apps_dir: str, prefix: str = None) -> List[str]:
                     # Формируем полный путь к модулю
                     module_full_path = f"{current_prefix}.{module_name}" if current_prefix else module_name
 
+                    # Формируем маршрут с учетом иерархии
+                    new_route = f"{current_route}{module_name}/"
+
                     # Проверяем наличие файла urls.py
                     urls_py_path = os.path.join(module_path, 'urls.py')
                     if os.path.exists(urls_py_path):
                         # Формируем маршрут и добавляем его в urlpatterns
-                        route = f"{module_name}/"
-                        url_pattern = path(route, include(f"{module_full_path}.urls"))
+                        url_pattern = path(new_route, include(f"{module_full_path}.urls"))
                         urlpatterns.append(url_pattern)
 
                     # Рекурсивно обходим подмодули
-                    recursively_find_urls(module_path, module_full_path)
+                    recursively_find_urls(module_path, module_full_path, new_route)
 
     # Начинаем рекурсивный поиск
-    recursively_find_urls(apps_dir, prefix)
+    recursively_find_urls(apps_dir, prefix, "")
 
     return urlpatterns
 
@@ -136,7 +139,7 @@ def check_app_config_name(directory: str, config_name: str) -> bool:
             if file == 'apps.py':
                 file_path = os.path.join(root, file)
 
-                with open(file_path, 'r') as f:
+                with open(file_path, 'r', encoding='utf-8') as f:
                     content = f.read()
 
                     searched_class_signature = rf'class\s+{config_name}Config\s*\(AppConfig\):'
@@ -154,3 +157,20 @@ def get_env_deploy_type():
         return production
     else:
         return development
+    
+def is_valid_module_name(module_name: str) -> bool:
+    """
+    Проверяет, соответствует ли имя модуля требованиям:
+    - только английские буквы в нижнем регистре
+    - допустим символ подчеркивания `_`
+    - не должно содержать цифр, других символов или букв в верхнем регистре
+
+    Args:
+        module_name (str): Имя модуля для проверки
+
+    Returns:
+        bool: True, если имя допустимо, иначе False
+    """
+    # Регулярное выражение для проверки
+    pattern = r'^[a-z_]+$'
+    return bool(re.match(pattern, module_name))

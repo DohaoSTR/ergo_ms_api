@@ -50,7 +50,7 @@ def get_database_configs() -> Dict:
         raise ImproperlyConfigured(error_msg)
     
     try:
-        with open(config_path, 'r') as file:
+        with open(config_path, 'r', encoding='utf-8') as file:
             config = yaml.safe_load(file)
     except Exception as e:
         error_msg = f"Ошибка при чтении файла конфигурации: {str(e)}"

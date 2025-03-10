@@ -77,6 +77,14 @@ poetry run cmd collectstatic --no-input
 poetry run cmd prod
 ```
 
+6. Создание модулей:
+```bash
+poetry run cmd add_module cms
+poetry run cmd add_module cms adp
+poetry run cmd add_module cms adp superuser
+poetry run cmd add_module cms adp roles
+```
+
 ### Интеграция с Poetry
 
 Для работы скриптов необходимо добавить следующую секцию в `pyproject.toml`:

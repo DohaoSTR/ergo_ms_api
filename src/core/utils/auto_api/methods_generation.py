@@ -3,6 +3,7 @@
 """
 
 import importlib
+import os
 import yaml
 import logging
 
@@ -533,13 +534,21 @@ def create_api_view(name: str, config: dict) -> Tuple[str, Type[APIView]]:
     
     return path, CustomDynamicAPIView
 
-def generate_routes_from_config(config_path: str) -> list:
+def generate_routes_from_config(configs_path: List[str]) -> list:
     """Генерирует маршруты из конфигурации."""
-    config = load_config(config_path)
-    routes = []
+    # Перебираем все файлы в указанной директории
+    for filename in os.listdir(configs_path):
+        # Проверяем, является ли файл YAML файлом
+        if filename.endswith('.yaml') or filename.endswith('.yml'):
+            config_path = os.path.join(configs_path, filename)
 
-    for section_name in config:
-        path_s, view = create_api_view(section_name, config)
-        routes.append(path(path_s, view.as_view()))
+            config = load_config(config_path)
+            routes = []
 
-    return routes
+            for section_name in config:
+                path_s, view = create_api_view(section_name, config)
+                routes.append(path(path_s, view.as_view()))
+
+            return routes
+        
+    return []

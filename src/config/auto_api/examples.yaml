@@ -1,0 +1,228 @@
+TasksGraphView:
+  path: test-integration/tasks/
+  method: GET
+  handler: examples.statistic.tasks_graph_handler
+  status_code: 200
+  renderers: json, browsable
+  auth_required: true
+  throttle_rates:
+    anon: 100/minute
+    user: 100/minute
+  required_params: []
+  optional_params:
+    limit: 10
+    offset: 10
+    page_size: 10
+  description: >
+    Получение статистики по задачам в графическом формате.
+
+    Метод возвращает агрегированные данные по статусам задач и количеству уникальных процессов.
+  tags: [Tasks]
+  params_description:
+    limit: 
+      description: Максимальное количество записей для возврата (по умолчанию - 10)
+      type: integer
+    offset: 
+      description: Количество записей для пропуска при пагинации (по умолчанию - 10)
+      type: integer
+    page_size: 
+      description: Количество элементов на странице (по умолчанию - 10)
+      type: integer
+  responses:
+    200:
+      description: Статистика по задачам успешно получена
+      example:
+        data:
+          status:
+            completed: 5
+            in_progress: 3
+          process_id:
+            unique_count: 4
+    400:
+      description: Ошибка в параметрах запроса
+      example:
+        error: "Файл some.txt не найден"
+    500:
+      description: Внутренняя ошибка сервера
+      example:
+        error: "Ошибка при получении данных"
+
+ProcessGraphView:
+  path: test-integration/processes/
+  method: GET
+  handler: examples.statistic.tasks_graph_handler
+  status_code: 200
+  renderers: json, browsable
+  auth_required: true
+  throttle_rates:
+    anon: 100/minute
+    user: 100/minute
+  required_params: 
+    - process_id
+  optional_params:
+    limit: 10
+    offset: 0
+  description: >
+    Получение статистики по конкретному процессу.
+
+    Возвращает детальную информацию о статусах задач в рамках указанного процесса.
+  params_description:
+    process_id: 
+      description: Уникальный идентификатор процесса (обязательный параметр)
+      type: integer
+    limit: 
+      description: Максимальное количество записей для возврата (по умолчанию - 10)
+      type: integer
+    offset: 
+      description: Количество записей для пропуска при пагинации (по умолчанию - 0)
+      type: integer
+  responses:
+    200:
+      description: Статистика по процессу успешно получена
+      example:
+        data:
+          status:
+            completed: 5
+            in_progress: 3
+          process_id:
+            unique_count: 1
+    404:
+      description: Процесс не найден
+      example:
+        error: "Процесс с указанным ID не найден"
+
+MessagesView:
+  path: test-integration/messages/
+  method: GET
+  handler: examples.messages.messages_handler
+  status_code: 200
+  renderers: json, browsable
+  auth_required: false
+  throttle_rates:
+    anon: 1/minute
+    user: 1/minute
+  required_params: []
+  optional_params:
+    type: info
+  description: >
+    Получение различных типов системных сообщений.
+
+    Доступные типы сообщений:
+    - info: Информационные сообщения
+    - error: Сообщения об ошибках
+    - warning: Предупреждения
+    - success: Сообщения об успешных операциях
+  params_description:
+    type:
+      description: Тип запрашиваемого сообщения (по умолчанию - info)
+      type: string
+  responses:
+    200:
+      description: Сообщение успешно получено
+      example:
+        message:
+          title: Информационное сообщение
+          text: Это информационное сообщение для пользователя
+          level: info
+    400:
+      description: Неверный тип сообщения
+      example:
+        error: "Указан неподдерживаемый тип сообщения"
+
+FileUploadView:
+  path: test-integration/upload/
+  method: POST
+  handler: examples.files.upload_handler
+  status_code: 201
+  renderers: json, browsable
+  auth_required: true
+  throttle_rates:
+    anon: 100/minute
+    user: 100/minute
+  required_params:
+    - file
+  optional_params: {}
+  description: >
+    Загрузка файла в систему.
+
+    Поддерживаемые форматы файлов:
+    - Документы: pdf, doc, docx, txt, rtf
+    - Изображения: jpg, jpeg, png, gif
+    - Данные: xml, json, csv
+    - Таблицы: xls, xlsx
+
+    Максимальный размер файла: 10MB
+  params_description:
+    file:
+      description: Файл для загрузки (поддерживаются все форматы)
+      type: file
+  responses:
+    201:
+      description: Файл успешно загружен
+      example:
+        message: Файл успешно загружен
+        file_name: 20240315_123456_example.pdf
+        original_name: example.pdf
+        file_size: 1024
+        file_type: application/pdf
+        path: uploads/20240315_123456_example.pdf
+    400:
+      description: Ошибка при загрузке файла
+      example:
+        error: "Файл не был предоставлен"
+    413:
+      description: Превышен максимальный размер файла
+      example:
+        error: "Размер файла превышает допустимый лимит в 10MB"
+
+FileDownloadView:
+  path: test-integration/download/
+  method: GET
+  handler: examples.files.download_handler
+  status_code: 200
+  renderers: json, browsable
+  auth_required: true
+  throttle_rates:
+    anon: 100/minute
+    user: 100/minute
+  required_params:
+    - filename
+  optional_params: {}
+  description: >
+    Скачивание файла из системы.
+
+    Для скачивания файла необходимо указать его имя в параметре filename.
+    Файл должен находиться в директории uploads.
+
+    Поддерживается скачивание файлов любых форматов.
+    Content-Type определяется автоматически на основе расширения файла.
+  params_description:
+    filename:
+      description: Имя файла для скачивания (включая расширение)
+      type: string
+  responses:
+    200:
+      description: Файл успешно скачан
+      example:
+        file: binary_data
+    404:
+      description: Файл не найден
+      example:
+        detail: "Файл example.pdf не найден"
+    400:
+      description: Ошибка в запросе
+      example:
+        error: "Имя файла не указано"
+    500:
+      description: Ошибка в запросе
+      example:
+        error: "Имя файла не указано"
+
+Tasks1GraphView:
+  path: test-integration/tasks1/
+  method: GET
+  handler: examples.statistic.tasks_graph_handler
+  auth_required: true
+  throttle_rates:
+    anon: 100/minute
+    user: 100/minute

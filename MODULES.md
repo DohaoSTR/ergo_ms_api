@@ -1,6 +1,6 @@
 # Модули и подмодули
 
-## Создание модуля
+## Создание модулей
 Новый модуль создается при помощи Poetry команды:
 ```bash
 poetry run cmd add_module <имя_модуля>
@@ -11,17 +11,6 @@ poetry run cmd add_module <имя_модуля>
 api/src/external/lms
 api/src/external/bi
 api/src/external/crm
-```
-
-## Создание подмодуля
-Подмодуль создается при помощи Poetry команды:
-```bash
-poetry run cmd add_submodule <имя_модуля> <имя_подмодуля>
-```
-
-Подмодуль создается в папке модуля. Например, чтобы создать подмодуль `performance_evaluation` в модуле `lms`:
-```
-api/src/external/lms/performance_evaluation
 ```
 
 # Структура модуля

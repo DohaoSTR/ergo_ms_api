@@ -6,17 +6,8 @@ from rest_framework_simplejwt.tokens import RefreshToken
 from drf_yasg.utils import swagger_auto_schema
 from drf_yasg import openapi
 
-from src.core.utils.database.main import OrderedDictQueryExecutor
-
 from django.contrib.auth import authenticate
 from django.utils.crypto import get_random_string
-
-from src.core.utils.database.dbconfig import DBConfig
-from src.core.utils.database.base import SqlAlchemyManager
-from src.core.cms.adp.queries import (
-    get_users, 
-    get_users_by_name
-)
 
 from src.core.utils.methods import (
     parse_errors_to_dict, 
@@ -67,15 +58,6 @@ class UserRegistrationValidationView(BaseAPIView):
             },
 
             required=['first_name', 'username', 'email', 'password', 'password_confirm'],
-
-            example={
-                'first_name': 'Евгений',
-                'username': 'Dohao',
-                'email': 'muzalevskij.evgenij@mail.ru',
-                'password': 'securepassword123',
-                'password_confirm': 'securepassword123',
-                'is_superuser': False,
-            }
         ),
         responses={
             201: "Пользователь успешно зарегистрирован.",
@@ -187,15 +169,6 @@ class UserRegistrationView(BaseAPIView):
             },
 
             required=['first_name', 'username', 'email', 'password', 'password_confirm'],
-
-            example={
-                'first_name': 'Евгений',
-                'username': 'Dohao',
-                'email': 'muzalevskij.evgenij@mail.ru',
-                'password': 'securepassword123',
-                'password_confirm': 'securepassword123',
-                'is_superuser': False,
-            }
         ),
         responses={
             201: "Пользователь успешно зарегистрирован.",
@@ -242,11 +215,6 @@ class UserAuthorizationView(BaseAPIView):
                 ),
             },
             required=['username', 'password', 'password_confirm'],
-            example={
-                'username': 'Dohao',
-                'password': 'securepassword123',
-                'password_confirm': 'securepassword123',
-            }
         ),
         responses={
             200: openapi.Response(
@@ -307,39 +275,5 @@ class ProtectedView(BaseAPIView):
     def get(self, request):
         return Response(
             {"message": "Вы авторизованы."}, 
-            status=status.HTTP_200_OK
-        )
-
-class UserView(BaseAPIView):
-    @swagger_auto_schema(
-        operation_description="Получение информации о пользователе.",
-        manual_parameters=[
-            openapi.Parameter(
-                'id',
-                openapi.IN_QUERY,
-                type=openapi.TYPE_INTEGER,
-                required=True,
-                description="Идентификатор пользователя",
-                default=1,
-            )
-        ],
-        responses={
-            200: "Информация о пользователе.",
-            401: "Неавторизованный доступ."
-        }
-    )
-    def get(self, request):
-        user_id = request.query_params.get('id')
-
-        users = OrderedDictQueryExecutor.fetchall(
-            get_users, 
-            user_id=user_id
-        )
-
-        return Response(
-            {
-                "data": users,
-                "message": "Пользователи успешно получены."
-            },
             status=status.HTTP_200_OK
         )

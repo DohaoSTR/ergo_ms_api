@@ -124,18 +124,6 @@ class AddModuleCommand(PoetryCommand):
     def __init__(self):
         super().__init__(self.django_command_name)
 
-class AddSubmoduleCommand(PoetryCommand):
-    """
-    Команда для добавления нового подмодуля в проект.
-
-    Полезна для автоматизации процесса создания нового приложения или модуля.
-    """
-    poetry_command_name = 'add_submodule'
-    django_command_name = 'add_submodule'
-
-    def __init__(self):
-        super().__init__(self.django_command_name)
-
 class CreateSuperuserCommand(PoetryCommand):
     """
     Команда для создания суперпользователя Django.

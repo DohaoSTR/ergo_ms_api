@@ -111,7 +111,7 @@ class CheckDatabaseConnectionView(BaseAPIView):
             # Сохраняем существующие переменные
             existing_vars = {}
             if os.path.exists(env_file_path):
-                with open(env_file_path, 'r') as env_file:
+                with open(env_file_path, 'r', encoding='utf-8') as env_file:
                     for line in env_file:
                         if '=' in line and not line.startswith(('DB_NAME=', 'DB_USER=', 'DB_PASSWORD=', 'DB_HOST=', 'DB_PORT=')):
                             key, value = line.strip().split('=', 1)
